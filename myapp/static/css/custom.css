@@ -1,0 +1,54 @@
+/* custom.css */
+body {
+    background-color: #000000;
+}
+
+.container {
+    max-width: 2000px;
+    display: grid;
+    place-items: center;     /* Centers items both horizontally and vertically */
+    height: 60vh;   
+}
+
+
+.card {
+    padding: 40px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+}
+
+h1 {
+    color: #ffffff;
+}
+
+.form-control{
+    margin: 20px;
+    padding: 10px;
+}
+
+.form-label{
+   font-weight: 800;
+   font-size:25px;
+}
+
+.btn{
+    display: block;
+    margin: 0 auto;
+    padding: 15px 20px;
+    border: none;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+}
+
+
+.btn:hover{
+    display: block;
+    margin: 0 auto;
+    padding: 15px 20px;
+    border: solid 1px;
+    background-color: gray;
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+}

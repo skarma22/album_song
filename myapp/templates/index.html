@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scraper Tool</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+</head>
+<body>
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Album Scraper Tool</h1>
+    
+    <form method="post" action="{% url 'scraper' %}" class="card p-4 shadow">
+        {% csrf_token %}
+        
+        <div class="mb-3">
+           <label for="url" class="form-label">Website URL</label>
+            <input type="url" id="url" name="url" class="form-control" placeholder="Enter website URL" required>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col">
+                <label for="num_posts_from" class="form-label">From Post Number</label>
+                <input type="number" id="num_posts_from" name="num_posts_from" class="form-control" placeholder="From" min="1" required>
+            </div>
+            <div class="col">
+                <label for="num_posts_to" class="form-label">To Post Number</label>
+                <input type="number" id="num_posts_to" name="num_posts_to" class="form-control" placeholder="To" min="1" required>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="file_name" class="form-label">Excel File Name</label>
+            <input type="text" id="file_name" name="file_name" class="form-control" placeholder="Enter file name" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100">Start Scraping</button>
+    </form>
+</div>
+
+<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>
