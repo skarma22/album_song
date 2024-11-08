@@ -1,5 +1,5 @@
 """
-URL configuration for album_song project.
+URL configuration for album_song_automation project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
@@ -14,12 +14,21 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
+# from django.contrib import admin
+# from django.urls import path
+# from mainapp import views as mainapp
+
+# urlpatterns = [
+#     path('admin/', admin.site.urls),
+#     path('', mainapp.home)
+# ]
+
+
+# scraper/urls.py
 from django.urls import path
-from myapp import views as myapp
+from myapp import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', myapp.scraper_view, name='scraper'),
-    # path("myapp/", myapp.scraper_view, name="scraper_view"),
+    path('', views.scrape_form, name='scrape_form'),
+    path('scrape-album/', views.scrape_album, name='scrape_album'),
 ]
