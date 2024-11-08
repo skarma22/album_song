@@ -73,6 +73,12 @@ def get_combined_lyrics(driver):
         '//*[@id="lyrics-root"]/div[8]',
         '//*[@id="lyrics-root"]/div[11]',
         '//*[@id="lyrics-root"]/div[14]',
+        '//*[@id="lyrics-root"]/div[17]',
+        '//*[@id="lyrics-root"]/div[20]',
+        '//*[@id="lyrics-root"]/div[23]',
+        '//*[@id="lyrics-root"]/div[26]',
+        '//*[@id="lyrics-root"]/div[29]',
+        '//*[@id="lyrics-root"]/div[32]',
     ]
     combined_lyrics = ''
     for xpath in lyrics_parts_xpaths:
